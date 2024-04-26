@@ -10,13 +10,17 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var counterLabel: UILabel!
-    @IBOutlet weak var clickButton: UIButton!
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var subtractButton: UIButton!
+    @IBOutlet weak var logTextView: UITextView!
     
     private var counter: Int = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
