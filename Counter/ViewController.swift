@@ -16,20 +16,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var logTextView: UITextView!
     
     private var counter: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    
-    
+  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         counterLabel.text = "Значение счетчика: \(counter)"
     }
     
-    @IBAction func buttonDidTap(_ sender: Any) {
-        counter += 1
+    @IBAction func addButtonDidTap(_ sender: Any) {
+                counter += 1
+                counterLabel.text = "Значение счетчика: \(counter)"
+    }
+    
+    @IBAction func subtractButtonDidTap(_ sender: Any) {
+        if counter > 0 {
+            counter -= 1
+            counterLabel.text = "Значение счетчика: \(counter)"
+        }
+    }
+    @IBAction func resetButtonDidTap(_ sender: Any) {
+        counter = 0
         counterLabel.text = "Значение счетчика: \(counter)"
     }
+    
 }
 
